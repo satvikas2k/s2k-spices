@@ -180,15 +180,15 @@ export function TopAnnouncementBanner() {
         background: "linear-gradient(90deg, #140e0a 0%, #201712 50%, #140e0a 100%)",
       }}
     >
-      <div className="mx-auto flex h-8 sm:h-9 max-w-[1600px] items-center justify-between px-3 sm:px-8">
+      <div className="mx-auto flex h-9 sm:h-10 max-w-[1600px] items-center justify-between px-3 sm:px-8">
         {/* Left Arrow */}
         <button
           type="button"
           onClick={prev}
           aria-label="Previous announcement"
-          className="flex h-7 w-7 items-center justify-center text-[var(--ivory)]/60 transition-colors hover:text-[var(--gold)]"
+          className="flex h-8 w-8 items-center justify-center text-[var(--ivory)]/70 transition-colors hover:text-[var(--gold)]"
         >
-          <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor">
+          <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor">
             <path strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
           </svg>
         </button>
@@ -203,9 +203,9 @@ export function TopAnnouncementBanner() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -6 }}
               transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="inline-flex items-center justify-center gap-2 font-[family-name:var(--font-button)] text-[0.62rem] sm:text-[0.68rem] md:text-[0.72rem] font-medium tracking-[0.2em] sm:tracking-[0.24em] text-[color-mix(in_oklab,var(--ivory)_92%,transparent)] hover:text-[var(--gold)] transition-colors uppercase"
+              className="inline-flex items-center justify-center gap-2 font-[family-name:var(--font-button)] text-[0.72rem] sm:text-[0.78rem] md:text-[0.82rem] font-semibold tracking-[0.18em] sm:tracking-[0.22em] text-[color-mix(in_oklab,var(--ivory)_95%,transparent)] hover:text-[var(--gold)] transition-colors uppercase"
             >
-              <span className="text-xs">{current.icon}</span>
+              <span className="text-sm">{current.icon}</span>
               <span>{current.text}</span>
             </motion.a>
           </AnimatePresence>
@@ -216,9 +216,9 @@ export function TopAnnouncementBanner() {
           type="button"
           onClick={next}
           aria-label="Next announcement"
-          className="flex h-7 w-7 items-center justify-center text-[var(--ivory)]/60 transition-colors hover:text-[var(--gold)]"
+          className="flex h-8 w-8 items-center justify-center text-[var(--ivory)]/70 transition-colors hover:text-[var(--gold)]"
         >
-          <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor">
+          <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor">
             <path strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
           </svg>
         </button>

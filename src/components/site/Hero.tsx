@@ -74,8 +74,8 @@ export function Hero() {
               transition={{ delay: 0.5, duration: 1 }}
             >
               {/* Sathvika's Brand Location Tag */}
-              <div className="inline-flex items-center gap-2.5 rounded-full border border-[color-mix(in_oklab,var(--gold)_45%,transparent)] bg-[color-mix(in_oklab,var(--forest)_80%,transparent)] px-3.5 py-1.5 backdrop-blur-md shadow-md">
-                <div className="h-7 w-7 overflow-hidden rounded-full border border-[var(--gold)] shrink-0 shadow-md">
+              <div className="inline-flex items-center gap-3 rounded-full border border-[color-mix(in_oklab,var(--gold)_55%,transparent)] bg-[color-mix(in_oklab,var(--forest)_85%,transparent)] px-4 py-2 sm:px-5 sm:py-2.5 backdrop-blur-md shadow-lg">
+                <div className="h-9 w-9 sm:h-11 sm:w-11 overflow-hidden rounded-full border-2 border-[var(--gold)] shrink-0 shadow-md">
                   <img
                     src={sathvikaPortrait}
                     alt="Sathvika"
@@ -83,7 +83,7 @@ export function Hero() {
                     style={{ objectPosition: "50% 25%" }}
                   />
                 </div>
-                <span className="s2k-eyebrow !text-[var(--gold)] !text-[0.65rem] tracking-[0.18em] uppercase font-semibold">
+                <span className="s2k-eyebrow !text-[var(--gold)] !text-[0.78rem] sm:!text-[0.88rem] tracking-[0.2em] uppercase font-bold">
                   Guntur, AP
                 </span>
               </div>
@@ -91,7 +91,7 @@ export function Hero() {
               {/* Auto-Rotating Product Spotlight Pill */}
               <a
                 href="#products"
-                className="group inline-flex items-center gap-3 rounded-full border border-[color-mix(in_oklab,var(--gold)_55%,transparent)] bg-[color-mix(in_oklab,var(--charcoal)_75%,transparent)] px-3.5 py-1.5 backdrop-blur-md shadow-lg transition-transform duration-300 hover:scale-105"
+                className="group inline-flex items-center gap-3.5 rounded-full border border-[color-mix(in_oklab,var(--gold)_60%,transparent)] bg-[color-mix(in_oklab,var(--charcoal)_80%,transparent)] px-4 py-2 sm:px-5 sm:py-2.5 backdrop-blur-md shadow-xl transition-all duration-300 hover:scale-105 hover:border-[var(--gold)]"
               >
                 <AnimatePresence mode="wait">
                   <motion.div
@@ -100,24 +100,24 @@ export function Hero() {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: 10 }}
                     transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-                    className="flex items-center gap-2.5"
+                    className="flex items-center gap-3"
                   >
-                    <div className="relative h-7 w-7 overflow-hidden rounded-full border border-[var(--gold)] shrink-0 shadow-md">
+                    <div className="relative h-9 w-9 sm:h-11 sm:w-11 overflow-hidden rounded-full border-2 border-[var(--gold)] shrink-0 shadow-md">
                       <img
                         src={ROTATING_FEATURED_PRODUCTS[productIdx].image}
                         alt={ROTATING_FEATURED_PRODUCTS[productIdx].name}
                         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     </div>
-                    <div className="flex items-center gap-2 text-left">
-                      <span className="text-[0.68rem] font-bold tracking-wider text-[var(--ivory)] group-hover:text-[var(--gold)] transition-colors">
+                    <div className="flex items-center gap-2.5 text-left">
+                      <span className="text-[0.8rem] sm:text-[0.92rem] font-bold tracking-wide text-[var(--ivory)] group-hover:text-[var(--gold)] transition-colors">
                         {ROTATING_FEATURED_PRODUCTS[productIdx].name}
                       </span>
-                      <span className="rounded-full bg-[var(--gold)]/20 px-2 py-0.5 text-[0.55rem] font-semibold tracking-wider text-[var(--gold)] uppercase">
+                      <span className="rounded-full bg-[var(--gold)]/25 px-2.5 py-0.5 text-[0.7rem] sm:text-[0.78rem] font-bold tracking-wider text-[var(--gold)] uppercase shadow-inner">
                         {ROTATING_FEATURED_PRODUCTS[productIdx].price}
                       </span>
                     </div>
-                    <span className="text-xs text-[var(--gold)] group-hover:translate-x-1 transition-transform">→</span>
+                    <span className="text-sm sm:text-base text-[var(--gold)] font-bold group-hover:translate-x-1.5 transition-transform">→</span>
                   </motion.div>
                 </AnimatePresence>
               </a>
